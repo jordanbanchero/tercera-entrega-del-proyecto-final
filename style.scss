@@ -1,0 +1,105 @@
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 103%;
+}
+
+
+nav {
+    background-color: #375474;
+}
+
+.navbar {
+    &-nav {
+        font-size: 80%;
+        font-family: 'Bebas Neue', cursive;
+    }
+    &-brand {
+        animation-duration: 4s;
+        animation-name: aparecer;
+        animation-iteration-count: 1;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+div#navbarNavDropdown.collapse.navbar-collapse { /* menú desplegado ubicado a la derecha en desktop*/
+    flex-direction: row-reverse;
+}
+
+div {
+    &.col-1 {
+        background-color: #fed177;
+    }
+    &.col-12 p {
+        text-align: justify;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    &.col-12 mt-0 px-0 {
+        background-color: #fed177;
+
+    }
+    &.row {
+        background-color: #fed177;
+    }
+}
+
+.card {
+    &-title {
+        text-align:center;
+    }
+    &-text {
+        text-align:center;
+    }
+    &-body {
+        background-color: #fed177;
+    }
+}
+
+footer {
+    background-color: #375474;
+}
+
+form {
+    background-color: #fed177 ;
+}
+
+$headings: (
+    h1:30px,
+    h2:25px,
+    h3:20px,
+
+); @each $titulo, $size in $headings{
+        .titulo__#{$titulo} {
+            font-size: $size;
+            text-align: center;
+            text-decoration: underline;
+        }
+}
+
+@media (min-width: 576px) {
+
+$headings: (
+    h1:40px,
+    h2:35px,
+    h3:30px,
+
+); @each $titulo, $size in $headings{
+        .titulo__#{$titulo} {
+            font-size: $size;
+            text-align: center;
+            text-decoration: underline;
+        }
+}
+}
